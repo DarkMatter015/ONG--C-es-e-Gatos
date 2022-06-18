@@ -38,6 +38,7 @@ a{
 }
 a:hover{
     opacity: 0.7;
+    transform: translateX(-2px);
 }
 
 a.button{
@@ -90,8 +91,6 @@ nav{
     margin: 8px;
 }
 
-
-
 .nav-list.active{
     transform: translateX(0);
     z-index: 1000;
@@ -123,53 +122,42 @@ nav{
   }
 
 
-.doar-case {
+.case {
     position: relative;
-}
-.doar-case img{
+    overflow-y: hidden;
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
 }
-.doar-content{
+.content{
     min-height: 240px;
     max-width: 300px;
     position: absolute;
     top: 50%;
-    left: 15%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.doar-content p{
-    color:#ffffff;
+img{
+    width: 100%;
+    height: 100%;
 }
 
-.adotar-case{
-    position: relative;
+.doar-c{
+    left: 15%;
 }
-.adotar-case img{
-    width: 100vw;
-    height: 100vh;
-}
-.adotar-content{
-    min-height: 240px;
-    max-width: 300px;
-    position: absolute;
-    top: 50%;
+.adotar-c{
     right: 15%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
-.adotar-content p{
+
+.adotar-c, .doar-c p{
     color: #ffffff;
 }
 
 .sobre-case{
     margin: 15px;
 }
+
 .sobre-content{
     display: flex;
     flex-wrap: wrap;
@@ -182,7 +170,7 @@ nav{
     border-radius: 15px;
     padding: 1%;
     margin-top: 1%;
-    max-width: 400px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,8 +178,6 @@ nav{
 }
 .sobre-content img{
     width: 50px;
-    width: 50px;
-    max-width: 100px;
     max-height: 50px;
 }
 .sobre-content a{
@@ -207,6 +193,7 @@ footer{
     align-items: center;
 }
 
+
 @media (max-width: 999px) {
     body{
         overflow-x: hidden;
@@ -218,22 +205,22 @@ footer{
         font-size: 24px;
     }
     p{
-        font-size: 16px;
-    }
-    a.button{
         font-size: 20px;
     }
-    .doar-content{
-        left: 5%;
+    a.button{
+        font-size: 22px;
     }
-    .doar-case img{
-        height: 80vh;
+    .doar-c{
+        left: 10%;
     }
-    .adotar-content{
-        right: 0%;
+    .adotar-c{
+        right: 10%;
     }
-    .adotar-case img{
-        height: 80vh;
+    .case{
+        height: 85vh;
+    }
+    .content{
+        max-width: 200px;
     }
     .nav-list{
         position: absolute;
@@ -259,27 +246,81 @@ footer{
 
 @media (max-width: 600px){
     h1{
-        font-size: 20px;
+        font-size: 24px;
     }
     h2{
-        font-size: 18px;
+        font-size: 20px;
     }
     p{
-        font-size: 16px;
+        font-size: 14px;
     }
     a.button{
-        font-size: 16px;
+        font-size: 14px;
     }
-    .doar-content{
-        left: 1%;
+    .doar-c{
+        left: 5%;
     }
-    .doar-case img{
-        height: 80vh;
+    .adotar-c{
+        right: 5%;
     }
-    .adotar-content{
-        right: 0%;
+    .case{
+        height: 70vh;
     }
-    .adotar-case img{
-        height: 80vh;
+    .content{
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 440px){
+    h1{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 14px;
+    }
+    p{
+        font-size: 12px;
+    }
+    a.button{
+        font-size: 12px;
+    }
+    .doar-c{
+        left: 3%;
+    }
+    .adotar-c{
+        right: 3%;
+    }
+    .case{
+        height: 55vh;
+    }
+    .content{
+        max-width: 130px;
+    }
+}
+@media (max-width: 350px){
+    h1{
+        font-size: 13px;
+    }
+    h2{
+        font-size: 12px;
+    }
+    p{
+        font-size: 10px;
+    }
+    a.button{
+        font-size: 10px;
+    }
+    .doar-c{
+        left: 2%;
+    }
+    .adotar-c{
+        right: 2%;
+    }
+    .case{
+        height: 40vh;
+    }
+    .content{
+        max-width: 150px;
+        top: 70%;
     }
 }
